@@ -124,31 +124,32 @@
   <a class="link-button" href="https://gcpheroes.github.io/quiz8/" target="_blank">Quiz 8 Q47-69 (Old questions)</a>
 
 
+
+<div id="money-rain"></div>
+
 <script>
-  const container = document.getElementById("money-rain");
+  document.addEventListener("DOMContentLoaded", () => {
+    const container = document.getElementById("money-rain");
 
-  function createMoneyDrop() {
-    const money = document.createElement("div");
-    money.classList.add("money");
-    money.textContent = "💰";
-    
-    // Random position and speed
-    money.style.left = Math.random() * 100 + "vw";
-    money.style.animationDuration = 2 + Math.random() * 3 + "s";
-    money.style.fontSize = 18 + Math.random() * 20 + "px";
+    function createMoneyDrop() {
+      const money = document.createElement("div");
+      money.classList.add("money");
+      money.textContent = "💰";
 
-    container.appendChild(money);
+      money.style.left = Math.random() * 100 + "vw";
+      money.style.animationDuration = 2 + Math.random() * 3 + "s";
+      money.style.fontSize = 18 + Math.random() * 20 + "px";
 
-    setTimeout(() => {
-      container.removeChild(money);
-    }, 5000);
-  }
+      container.appendChild(money);
 
-  // Keep creating new drops
-  setInterval(createMoneyDrop, 200);
+      setTimeout(() => {
+        container.removeChild(money);
+      }, 5000);
+    }
+
+    setInterval(createMoneyDrop, 200);
+  });
 </script>
 
-  
-<div id="money-rain"></div>
 </body>
 </html>
