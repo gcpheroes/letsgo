@@ -17,9 +17,16 @@
       
       
       /* Google colors */
-      background: linear-gradient(-45deg, #e8f0fe, #fdecea, #fef7e0, #e6f4ea);
-      background-size: 400% 400%;
-      animation: googleGradientBG 8s linear infinite;
+      background: linear-gradient(-45deg,
+        #e8f0fe,  /* light blue */
+        #fdecea,  /* light red */
+        #fef7e0,  /* light yellow */
+        #e6f4ea,  /* light green */
+        #e8f0fe,  /* repeat light blue */
+        #e6f4ea   /* repeat light green */
+      );
+      background-size: 600% 600%;
+      animation: googleGradientBG 12s ease-in-out infinite;
     }
     
     @keyframes googleGradientBG {
