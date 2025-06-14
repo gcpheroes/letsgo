@@ -18,12 +18,12 @@
       
       /* Google colors */
       background: linear-gradient(-45deg,
-        #d2e3fc,  /* soft blue */
-        #fce8e6,  /* soft red */
-        #fff4cc,  /* soft yellow */
-        #d7f5e9,  /* soft green */
-        #d2e3fc,
-        #d7f5e9
+        #e8f0fe,  /* light blue */
+        #fdecea,  /* light red */
+        #fef7e0,  /* light yellow */
+        #e6f4ea,  /* light green */
+        #e8f0fe,  /* repeat light blue */
+        #e6f4ea   /* repeat light green */
       );
       background-size: 600% 600%;
       animation: googleGradientBG 12s ease-in-out infinite;
@@ -64,6 +64,25 @@
       border-color: #4285F4;
     }
 
+    #dino {
+      position: fixed;
+      bottom: 10px;
+      left: -100px;
+      width: 88px;
+      height: auto;
+      z-index: 10;
+      animation: dinoRun 10s linear infinite;
+    }
+    
+    @keyframes dinoRun {
+      0% {
+        left: -100px;
+      }
+      100% {
+        left: 110%;
+      }
+    }
+
     @media (max-width: 500px) {
       h1 {
         font-size: 23px;
@@ -94,6 +113,8 @@
   <a class="link-button" href="https://gcpheroes.github.io/quiz6/" target="_blank">Quiz 6 Q1-23 (Old questions)</a>
   <a class="link-button" href="https://gcpheroes.github.io/quiz7/" target="_blank">Quiz 7 Q24-46 (Old questions)</a>
   <a class="link-button" href="https://gcpheroes.github.io/quiz8/" target="_blank">Quiz 8 Q47-69 (Old questions)</a>
-  
+
+
+<img id="dino" src="https://raw.githubusercontent.com/chrisdermody/chrome-dino-game/master/images/dino.png" alt="Dino">
 </body>
 </html>
