@@ -14,6 +14,17 @@
       flex-direction: column;
       align-items: center;
       padding: 40px 20px;
+      
+      
+      background: linear-gradient(-45deg, #e0f2ff, #f3e8ff, #e0f7fa, #ffffff);
+      background-size: 400% 400%;
+      animation: animatedBackground 20s ease infinite;
+    }
+    
+    @keyframes animatedBackground {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
     h1 {
