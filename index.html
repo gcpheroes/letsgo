@@ -64,23 +64,30 @@
       border-color: #4285F4;
     }
 
-    #dino {
+    #dino-runner {
       position: fixed;
       bottom: 10px;
       left: -100px;
       width: 88px;
-      height: auto;
+      height: 94px;
+      background-image: url('https://trex-runner.com/images/trex-sprite.png');
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: auto 94px;
       z-index: 10;
-      animation: dinoRun 10s linear infinite;
+      animation:
+        dinoRunSprite 0.25s steps(2) infinite,
+        dinoMoveAcross 10s linear infinite;
     }
     
-    @keyframes dinoRun {
-      0% {
-        left: -100px;
-      }
-      100% {
-        left: 110%;
-      }
+    @keyframes dinoRunSprite {
+      0% { background-position-x: 0px; }
+      100% { background-position-x: -176px; } /* 2 frames x 88px each */
+    }
+    
+    @keyframes dinoMoveAcross {
+      0%   { left: -100px; }
+      100% { left: 110%; }
     }
 
     @media (max-width: 500px) {
@@ -115,6 +122,6 @@
   <a class="link-button" href="https://gcpheroes.github.io/quiz8/" target="_blank">Quiz 8 Q47-69 (Old questions)</a>
 
 
-<img id="dino" src="https://raw.githubusercontent.com/chrisdermody/chrome-dino-game/master/images/dino.png" alt="Dino">
+<div id="dino-runner"></div>
 </body>
 </html>
