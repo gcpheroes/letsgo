@@ -65,32 +65,6 @@
     }
 
     
-    #dino-runner {
-      position: fixed;
-      bottom: 10px;
-      left: -100px;
-      width: 88px;
-      height: 94px;
-      background-image: url('trex.png');
-      background-repeat: no-repeat;
-      background-size: auto 94px;
-      background-position: 0 0;
-      z-index: 10;
-      animation:
-        dinoRunSprite 0.25s steps(2) infinite,
-        dinoMoveAcross 10s linear infinite;
-    }
-    
-    @keyframes dinoRunSprite {
-      0% { background-position-x: 0px; }
-      100% { background-position-x: -176px; } /* 2 frames x 88px each */
-    }
-    
-    @keyframes dinoMoveAcross {
-      0%   { left: -100px; }
-      100% { left: 110%; }
-    }
-
     @media (max-width: 500px) {
       h1 {
         font-size: 23px;
@@ -123,6 +97,6 @@
   <a class="link-button" href="https://gcpheroes.github.io/quiz8/" target="_blank">Quiz 8 Q47-69 (Old questions)</a>
 
 
-<div id="dino-runner"></div>
+
 </body>
 </html>
